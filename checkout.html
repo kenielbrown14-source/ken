@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - AutoMotive Prime</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">AutoMotive Prime</div>
+        <ul>
+            <li><a href="products.html">Services</a></li>
+            <li><a href="cart.html">Back to Cart</a></li>
+        </ul>
+    </nav>
+
+    <div class="form-container">
+        <h2>Confirm Your Details</h2>
+        
+        <p style="font-size: 1.2em; font-weight: bold; margin-bottom: 20px;">
+            Total Service Amount: $<span id="checkout-total" style="color: var(--accent-color);">0.00</span>
+        </p>
+
+        <form onsubmit="return processCheckout(event)">
+            <label>Customer Name:</label>
+            <input type="text" required>
+
+            <label>Service Address (or Location):</label>
+            <textarea required></textarea>
+
+            <label>Payment Card Number:</label>
+            <input type="number" required>
+            
+            <div class="button-group" style="display: flex; gap: 10px; margin-top: 20px;">
+                <button type="submit" style="flex-grow: 1;">Confirm Payment</button>
+                <button type="button" onclick="window.location.href='cart.html'" style="flex-grow: 1; background-color: #757575;">Cancel Booking</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let cart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
+            let subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            let total = subtotal + (subtotal * 0.15); // Add 15% tax
+            document.getElementById('checkout-total').innerText = total.toFixed(2);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - AutoMotive Prime</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">AutoMotive Prime</div>
+        <ul>
+            <li><a href="index.html">Login</a></li>
+            <li><a href="products.html">Services</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Car Maintenance Service Packages</h1>
+    
+        <div class="product-container">
+            <div class="service-card">
+                <img src="../Assets/oil_change.jpg" alt="Full Synthetic Oil Change Service">
+                <h3>Full Synthetic Oil Change</h3>
+                <p>Includes filter replacement, fluid top-offs, and 5-point inspection.</p>
+                <p class="price" style="font-size: 1.5em; color: var(--primary-color);">$85.00</p>
+                <button onclick="addToCart('Full Synthetic Oil Change', 85.00)">Book Service</button>
+            </div>
+
+            <div class="service-card">
+                <img src="../Assets/brakes.jpg" alt="Brake Pad Replacement Service">
+                <h3>Brake Pad Replacement (Front)</h3>
+                <p>Premium ceramic pads and resurfacing of rotors on the front axle.</p>
+                <p class="price" style="font-size: 1.5em; color: var(--primary-color);">$150.00</p>
+                <button onclick="addToCart('Brake Pad Replacement', 150.00)">Book Service</button>
+            </div>
+
+            <div class="service-card">
+                <img src="../Assets/tire_rotation.jpg" alt="Tire Rotation and Balance Service">
+                <h3>Tire Rotation & Balance</h3>
+                <p>Extend tire life and ensure balanced wear for optimal handling.</p>
+                <p class="price" style="font-size: 1.5em; color: var(--primary-color);">$45.00</p>
+                <button onclick="addToCart('Tire Rotation & Balance', 45.00)">Book Service</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

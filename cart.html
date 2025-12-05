@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - AutoMotive Prime</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">AutoMotive Prime</div>
+        <ul>
+            <li><a href="products.html">Services</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="cart-container">
+        <h1>Review Your Booking</h1>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Service Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                </tbody>
+        </table>
+
+        <div class="totals">
+            <p>Subtotal: $<span id="subtotal">0.00</span></p>
+            <p>Tax (15%): $<span id="tax">0.00</span></p>
+            <p><strong>Total Due: $<span id="total">0.00</span></strong></p>
+        </div>
+
+        <div class="cart-actions" style="margin-top: 20px; text-align: right;">
+            <button onclick="clearCart()" style="background-color: #d9534f;">Clear All Services</button>
+            <button onclick="window.location.href='checkout.html'">Proceed to Checkout</button>
+            <button onclick="window.location.href='products.html'" style="background-color: #757575;">Continue Shopping</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

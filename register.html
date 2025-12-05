@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - AutoMotive Prime</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">AutoMotive Prime</div>
+        <ul>
+            <li><a href="index.html">Login</a></li>
+            <li><a href="products.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="form-container">
+        <h2>Create an Account</h2>
+        <form onsubmit="return validateRegister(event)">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="reg-username">Username:</label>
+            <input type="text" id="reg-username" required>
+
+            <label for="reg-password">Password:</label>
+            <input type="password" id="reg-password" required>
+
+            <p id="reg-error" style="color: var(--accent-color);"></p>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

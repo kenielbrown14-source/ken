@@ -1,0 +1,153 @@
+/*  Name: Keniel Brown
+    ID: 2403229
+    Module: Web Programming (CIT2011)
+    Assignment: Individual Assignment #2
+*/
+
+/* IA#2 Q1c: Consistent Color Palette & Variables for theme consistency */
+:root {
+    --primary-color: #003366; /* Navy Blue: Trust & Reliability */
+    --accent-color: #FF8C00; /* Safety Orange: Call to Action & Urgency */
+    --bg-color: #f4f4f4;    /* Light Grey: Clean background */
+    --text-color: #333;     /* Dark text */
+}
+
+/* IA#2 Q1a: Element Selector - Universal Reset and Base Font */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* IA#2 Q1b: Flexbox Layout for Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    color: white;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* IA#2 Q1a: Descendant Selector */
+nav ul li {
+    display: inline;
+    margin-left: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* --- Layouts for Forms and Products --- */
+/* IA#2 Q1a: Class Selector for general container and layout */
+.container, .form-container, .cart-container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.form-container {
+    max-width: 400px;
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+/* IA#2 Q1b: Grid Layout for Product Cards (Desktop View) */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.service-card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* --- Inputs and Buttons Styling --- */
+/* IA#2 Q1a: Attribute Selector */
+input[type="text"], input[type="password"], input[type="email"], input[type="date"], textarea, input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* IA#2 Q1a: Pseudo-class Selector */
+button {
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e67e00; /* Slightly darker orange */
+}
+
+/* Cart Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+.totals {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+/* IA#2 Q1b: Responsive Layout for Mobile - Media Query */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    nav ul {
+        margin-top: 10px;
+    }
+    nav ul li {
+        margin-left: 10px;
+    }
+    .product-container {
+        grid-template-columns: 1fr; /* Stack products on mobile */
+    }
+}
